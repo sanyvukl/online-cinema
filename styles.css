@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    color: #fff;
+    box-sizing: border-box;
+}
+:root{
+    --nmbar : #111;
+    --nmbg : #191919;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* Bars */
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: var(--nmbar);
+}
+.navbar-container{
+    font-family: "Sen", sans-serif;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    height: 100%;
+}
+.logo-container{
+    flex: 1;
+}
+.logo{
+    font-size: 30px;
+    color: #fff;
+}
+.menu-container{
+    flex:6;
+    color: #fff;
+}
+.menu-list{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.menu-link{
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.menu-link.active{
+    font-weight: bold;
+}
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+.profile-picture{
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    background-color: aqua;
+    border-radius: 50%;
+    border: 0;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.profile-text{
+    flex-wrap: nowrap;
+    margin-left: 5px;
+}
+.toggle{
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: white;
+    width: 38px;
+    height: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.toggle-icon {
+    color: gold;
+}
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    right: 1px;
+    z-index: 1;
+}
+.sidebar{
+    width: 50px;
+    height: 100vh;
+    background-color: var(--nmbar);
+    position: fixed;
+    top: 0;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar-link {
+    font-size: 20px;
+    margin: 20px auto;
+}
+nav a,
+.sidebar-link i{
+    transition: .2s linear;
+}
+nav a:hover,
+.sidebar-link:hover i{
+    color: goldenrod;
+}
+
+/* Container */
+.container{
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    background-color: var(--nmbg);
+    color: #fff;
+}
+.container-content{
+    padding-left: 50px;
+}
+.featured-content{
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-left: 50px;
+    height: 60vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #191919) center no-repeat;
+}
+.featured-content2{
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #191919), url("img/f-2.jpg") top no-repeat;
+    background-size: cover;
+}
+.featured-title{
+    width: 200px;
+}
+.featured-desc{
+    max-width: 500px;
+    margin: 30px 0;
+    color: lightgray;
+}
+.featured-button{
+    color: #191919;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.movie-list-container{
+    margin-left: 15px;
+}
+.movie-list-title{
+    text-transform: uppercase;
+}
+.movie-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 300px;
+    position: relative;
+}
+.movie-list-item{
+    width: 280px;
+    margin-right: 20px;
+    position: relative;
+}
+.movie-list-img{
+    width: 270px;
+    height: 200px;
+    border-radius: 20px;
+    transition: all .2s linear;
+    object-fit: cover;
+}
+.movie-list-item-title{
+    padding: 0 10px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #333;
+}
+.movie-list-item:hover .movie-list-img{
+    transform: scale(1.1);
+    opacity: .5;
+}
+.movie-list-item-info{
+    position: absolute;
+    top: 15%;
+    left: 20px;
+    opacity: 0;
+    cursor: none;
+    transition: all .2s linear;
+    transform: scale(0.8);
+}
+.movie-list-item:hover .movie-list-item-info{
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: auto;
+}
+.movie-list-item-desc{
+    margin: 10px 0;
+}
+.movie-list-item-button{
+    color: #191919;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 7px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.arrow{
+    position: absolute;
+    font-size: 120px;
+    right: 0px;
+    opacity: .7;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrow:hover{
+    opacity: 1;
+}
