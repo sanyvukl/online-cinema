@@ -22,27 +22,27 @@ body{
     align-items: center;
     padding-left: 50px;
     height: 100%;
+    color: #fff;
 }
 .logo-container{
     flex: 1;
 }
 .logo{
     font-size: 30px;
-    color: #fff;
 }
 .menu-container{
     flex:6;
-    color: #fff;
 }
 .menu-list{
     display: flex;
     align-items: center;
     padding: 0 20px;
+    color: inherit;
 }
 .menu-link{
-    color: #fff;
     margin-right: 20px;
     text-decoration: none;
+    color: inherit;
 }
 .menu-link.active{
     font-weight: bold;
@@ -72,7 +72,7 @@ body{
     cursor: pointer;
     margin-left: 20px;
     background-color: white;
-    width: 38px;
+    width: 40px;
     height: 20px;
     border-radius: 30px;
     display: flex;
@@ -91,6 +91,7 @@ body{
     position: absolute;
     right: 1px;
     z-index: 1;
+    transition: all .2s linear;
 }
 .sidebar{
     width: 50px;
@@ -166,6 +167,11 @@ nav a:hover,
     flex-direction: row;
     align-items: center;
     height: 300px;
+    transform: translateX(0);
+    transition: all .2s linear;
+}
+.movie-list-wrapper{   
+    overflow: hidden;
     position: relative;
 }
 .movie-list-item{
@@ -222,11 +228,54 @@ nav a:hover,
 .arrow{
     position: absolute;
     font-size: 120px;
-    right: 0px;
     opacity: .7;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 99;
+}
+.arrow-right{
+    right: 0;
+}
+.arrow-left{
+    left: 0;
+    transform: translateY(-50%) rotate(-180deg);
 }
 .arrow:hover{
     opacity: 1;
+}
+
+/* Night Mode */
+.container.active{
+    background-color: white;
+    color: #111;
+}
+.navbar.active{
+    background-color: white;
+    color: #111;
+}
+.navbar.active .logo{
+    color: #111;
+}
+.navbar.active .menu-link{
+    color: #111;
+}
+.navbar.active .profile-text span {
+    color: #111;
+}
+.navbar.active .profile-text i{
+    color: #111;
+}
+.sidebar.active{
+    background-color: white;
+}
+.sidebar.active i{
+    color: #111;
+}
+.toggle.active{
+    background-color: #111;
+}
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+    transition: all .2s linear;
 }
